@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f1ea" />
+  <title>Chapter 21 | Confidence</title>
+  <meta name="description" content="A birthday experience made for Confidence Makoma Moropana's 21st birthday." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="no-scroll">
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+  <!-- Opening screen -->
+  <section id="giftScreen" class="gift-screen" aria-label="Birthday gift opening screen">
+    <div class="gift-copy">
+      <p class="eyebrow">FOR CONFIDENCE MAKOMA MOROPANA</p>
+      <h1>A little corner<br />of the internet,<br /><em>just for you.</em></h1>
+      <p class="gift-subtitle">Made with love, old photos, new memories, and a friendship that has been growing since 2019.</p>
+      <button id="openGift" class="button button-primary">Open Chapter 21 <span>→</span></button>
+
+      <div class="soundtrack-preview" aria-label="Soundtrack preview">
+        <span class="soundtrack-note">♪</span>
+        <div>
+          <strong>Chapter 21 Theme</strong>
+          <small>birthday soundtrack • starts when you open</small>
+        </div>
+      </div>
+      <p class="tiny-date">26 September 2026</p>
+    </div>
+
+    <div class="gift-art" aria-hidden="true">
+      <div class="gift-card gift-card-back"></div>
+      <div class="gift-card gift-card-middle"></div>
+      <div class="gift-card gift-card-front"><span>21</span><small>CMM</small></div>
+    </div>
+  </section>
+
+  <!-- Floating navigation -->
+  <nav class="mini-nav" id="miniNav" aria-label="Page sections">
+    <a class="nav-mark" href="#home">21</a>
+    <div class="mini-links">
+      <a href="#letter">Letter</a>
+      <a href="#memories">Memories</a>
+      <a href="#twentyone">21 things</a>
+      <a href="#openwhen">Open when</a>
+    </div>
+  </nav>
+
+  <!-- Music -->
+  <div class="music-dock" id="musicDock">
+    <button id="musicToggle" class="music-toggle" aria-label="Play or pause soundtrack">♪</button>
+    <div class="music-meta">
+      <strong>Chapter 21 Theme</strong>
+      <span id="musicStatus">soundtrack ready</span>
+    </div>
+    <div class="music-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  </div>
+  <audio id="soundtrack" src="music/chapter-21-theme.mp3" loop preload="auto" playsinline></audio>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="hero-shade"></div>
+    <div class="hero-content reveal">
+      <p class="eyebrow eyebrow-light">26 • 09 • 2026</p>
+      <h1>Chapter <span>21</span></h1>
+      <p class="hero-name">Confidence Makoma Moropana</p>
+      <p id="typingText" class="hero-subtitle"></p>
+      <a href="#countdown" class="button button-outline">Begin the story <span>↓</span></a>
+    </div>
+    <div class="hero-badge reveal" aria-hidden="true"><span>friends since</span><strong>2019</strong></div>
+  </header>
+
+  <main>
+    <!-- Countdown -->
+    <section id="countdown" class="section countdown-section">
+      <div class="container split-layout reveal">
+        <div class="section-copy">
+          <p class="eyebrow">UNTIL THE BIG DAY</p>
+          <h2>Almost time for<br /><em>Chapter 21.</em></h2>
+          <p>The countdown is set to midnight in South Africa. When 26 September begins, the page changes with her.</p>
+        </div>
+
+        <div class="countdown-card">
+          <div id="countdownGrid" class="countdown-grid">
+            <div><strong id="days">00</strong><span>days</span></div>
+            <div><strong id="hours">00</strong><span>hours</span></div>
+            <div><strong id="minutes">00</strong><span>minutes</span></div>
+            <div><strong id="seconds">00</strong><span>seconds</span></div>
+          </div>
+          <div id="birthdayState" class="birthday-state hidden">
+            <span>✦</span>
+            <h3>She is officially 21.</h3>
+            <p>Happy birthday, Confidence. Chapter 21 has begun.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Letter -->
+    <section id="letter" class="section letter-section">
+      <div class="container letter-layout">
+        <aside class="letter-photo reveal">
+          <img src="images/green.jpg" alt="Confidence wearing a green blazer" />
+          <p class="photo-tag">Confidence • Chapter 21</p>
+          <blockquote>“Somewhere along the way, you stopped feeling like just a friend and became family.”</blockquote>
+        </aside>
+
+        <article class="letter-copy reveal">
+          <p class="eyebrow">A LETTER FOR YOU</p>
+          <h2>Dear Confidence,</h2>
+          <div class="letter-body">
+            <p>Happy 21st birthday.</p>
+            <p>It is genuinely a little crazy to think that we have known each other since 2019. We have gone from being younger versions of ourselves, still figuring life out, to watching each other grow into the people we are becoming now.</p>
+            <p>Somewhere along the way, you stopped feeling like just a friend and became family. You are genuinely like a sister to me — the kind of person I can care for, laugh with, annoy, support, and still know that underneath everything, the friendship is real.</p>
+            <p>I admire the way you carry yourself. There is a softness about you, but there is strength there too. You are kind, humble and thoughtful, and you have this calm presence even when life itself is doing the absolute most.</p>
+            <p>I have also had the privilege of seeing you grow. Not only physically — because obviously the school-uniform era had to end eventually 😂 — but in your maturity, your character, your confidence and the way you carry yourself.</p>
+            <p>As you turn 21, I hope you never feel pressured to have everything figured out. Twenty-one is not a deadline. It is simply another chapter.</p>
+            <p>I hope this chapter brings you peace — real peace. I hope you experience friendships that feel safe, opportunities that stretch you, moments that make you laugh until your stomach hurts, and achievements that remind you just how capable you are.</p>
+            <p>I hope you remain soft without letting the world take advantage of your softness. I hope you remain kind while learning when to choose yourself. And I hope you keep becoming more confident in who you are — which, considering your name, feels like something you were contractually obligated to do anyway.</p>
+            <p>Most importantly, I hope you always remember that you are loved. Not because of what you achieve, how you look, what you can give people, or how well life is going — simply because you are you.</p>
+            <p>Thank you for every year of friendship since 2019. Thank you for the memories we already have and for all the random moments that somehow became important without us even noticing.</p>
+            <p>I do not know exactly where life will take either of us, but I genuinely hope that years from now we will still be able to look back at these days, laugh at ourselves and say, “Wow… we really grew up.”</p>
+            <p>Happy birthday, Confidence. <strong>Welcome to Chapter 21. 🤍</strong></p>
+          </div>
+          <p class="signature">Always rooting for you,<br /><strong>Lesetja</strong></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Featured memories -->
+    <section id="memories" class="section memories-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">2019 → NOW</p>
+            <h2>Pieces of your story.</h2>
+          </div>
+          <div class="section-heading-note">
+            <p>Eight featured memories live here. Tap the <strong>+</strong> on any photo to open the full album — all 20 photos are inside.</p>
+            <button id="viewAllPhotos" class="text-button">View all 20 photos <span>＋</span></button>
+          </div>
+        </div>
+
+        <div class="memory-grid">
+          <figure class="memory-card memory-tall reveal" data-gallery-index="14">
+            <img src="images/throwback.jpg" alt="Throwback collage" />
+            <button class="photo-plus" type="button" aria-label="Open full photo album">＋</button>
+            <figcaption><span>01</span> Before Chapter 21 knew what was coming.</figcaption>
+          </figure>
+          <figure class="memory-card memory-wide reveal" data-gallery-index="13">
+            <img src="images/schoolwide.jpg" alt="School memory" />
+            <button class="photo-plus" type="button" aria-label="Open full photo album">＋</button>
+            <figcaption><span>02</span> The school era — where a lot of this story began.</figcaption>
+          </figure>
+          <figure class="memory-card reveal" data-gallery-index="10">
+            <img src="images/group.jpg" alt="School group memory" />
+            <button class="photo-plus" type="button" aria-label="Open full photo album">＋</button>
+            <figcaption><span>03</span> People, places and memories that became part of the story.</figcaption>
+          </figure>
+          <figure class="memory-card reveal" data-gallery-index="15">
+            <img src="images/sunglasses.jpg" alt="Confidence wearing sunglasses" />
+            <button class="photo-plus" type="button" aria-label="Open full photo album">＋</button>
+            <figcaption><span>04</span> A little elegance never hurt anybody.</figcaption>
+          </figure>
+          <figure class="memory-card memory-wide reveal" data-gallery-index="9">
+            <img src="images/green.jpg" alt="Confidence in a green blazer" />
+            <button class="photo-plus" type="button" aria-label="Open full photo album">＋</button>
+            <figcaption><span>05</span> Growing into yourself, one chapter at a time.</figcaption>
+          </figure>
+          <figure class="memory-card reveal" data-gallery-index="19">
+            <img src="images/whiteblazer.jpg" alt="Confidence in a white blazer" />
+            <button class="photo-plus" type="button" aria-label="Open full photo album">＋</button>
+            <figcaption><span>06</span> Grace has always suited you.</figcaption>
+          </figure>
+          <figure class="memory-card reveal" data-gallery-index="0">
+            <img src="images/blackjacket.jpg" alt="Confidence in a black jacket" />
+            <button class="photo-plus" type="button" aria-label="Open full photo album">＋</button>
+            <figcaption><span>07</span> Still you — just more grown.</figcaption>
+          </figure>
+          <figure class="memory-card memory-wide reveal" data-gallery-index="7">
+            <img src="images/hero.jpg" alt="Confidence wearing a blue dress" />
+            <button class="photo-plus" type="button" aria-label="Open full photo album">＋</button>
+            <figcaption><span>08</span> Chapter 21 looks good on you.</figcaption>
+          </figure>
+        </div>
+
+        <div class="album-callout reveal">
+          <div>
+            <span class="album-number">20</span>
+            <p><strong>Every photo is included.</strong><br />The featured grid is only the front cover. The full album has all twenty.</p>
+          </div>
+          <button id="openAlbumButton" class="button button-primary">Open the full album <span>＋</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 21 appreciation cards -->
+    <section id="twentyone" class="section appreciation-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">21 FOR 21</p><h2>21 things I appreciate about you.</h2></div>
+          <div class="opened-counter"><strong id="openedCount">0</strong><span>/ 21 opened</span></div>
+        </div>
+        <div id="appreciationGrid" class="appreciation-grid"></div>
+      </div>
+    </section>
+
+    <!-- Three wishes -->
+    <section class="section wishes-section">
+      <div class="container">
+        <div class="section-heading section-heading-center reveal">
+          <div><p class="eyebrow">FOR CHAPTER 21</p><h2>If I could give you three things…</h2></div>
+        </div>
+        <div class="wishes-grid">
+          <article class="wish-card reveal"><span>01</span><h3>Peace</h3><p>The kind that does not depend on everything going perfectly. The kind that stays even while life changes around you.</p></article>
+          <article class="wish-card reveal"><span>02</span><h3>Courage</h3><p>To choose yourself when you need to, walk through unfamiliar doors, and trust that you are capable of more than you think.</p></article>
+          <article class="wish-card reveal"><span>03</span><h3>Joy</h3><p>Not only in the big milestones, but in ordinary Tuesdays, silly conversations, good food, answered prayers and people who feel like home.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section timeline-section">
+      <div class="container timeline-layout">
+        <div class="timeline-intro reveal">
+          <p class="eyebrow">SINCE 2019</p>
+          <h2>From 2019 to Chapter 21.</h2>
+          <p>Since 2019, we have grown through school days, changing seasons, random memories and everything in between. Somehow, all of it brought us here — to Chapter 21.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-label">2019</span>
+            <div><h3>Where it all began.</h3><p>A friendship that started simply and slowly became one of the constants in my life.</p></div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-label">School</span>
+            <div><h3>The uniform era.</h3><p>School days, random conversations, inside jokes and photos we probably never imagined would mean this much years later.</p></div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-label">Growing up</span>
+            <div><h3>Somewhere along the way, we grew up.</h3><p>Life got busier, responsibilities became real, and somehow we started becoming actual adults. Still a little suspicious.</p></div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-label">2026</span>
+            <div><h3>Chapter 21.</h3><p>Years later, I still get to call you my friend, my sister, and one of the people I am genuinely grateful life gave me.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open when -->
+    <section id="openwhen" class="section openwhen-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">KEEP THESE FOR LATER</p><h2>Open when…</h2></div>
+          <p class="section-heading-note">Because birthdays happen once a year, but sometimes you need a reminder on an ordinary day.</p>
+        </div>
+        <div class="envelope-grid">
+          <button class="envelope reveal" data-note="smile"><span>01</span><b>You need to smile</b><small>open letter →</small></button>
+          <button class="envelope reveal" data-note="doubt"><span>02</span><b>You doubt yourself</b><small>open letter →</small></button>
+          <button class="envelope reveal" data-note="hardday"><span>03</span><b>You have had a hard day</b><small>open letter →</small></button>
+          <button class="envelope reveal" data-note="friendship"><span>04</span><b>You miss our friendship</b><small>open letter →</small></button>
+          <button class="envelope reveal" data-note="future"><span>05</span><b>The future feels scary</b><small>open letter →</small></button>
+          <button class="envelope envelope-special reveal" data-note="birthday"><span>21</span><b>It is your birthday</b><small>open letter →</small></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final -->
+    <section class="final-section">
+      <div class="final-shade"></div>
+      <div class="final-content reveal">
+        <p class="eyebrow eyebrow-light">ONE LAST THING</p>
+        <h2>Here’s to you,<br /><em>Confidence.</em></h2>
+        <p>To 21 years of life.<br />To friendship since 2019.<br />To everything you have survived.<br />To everything you are becoming.<br />And to all the beautiful things still waiting for you.</p>
+        <button id="celebrateButton" class="button button-light">Celebrate Confidence ✦</button>
+        <p class="final-note">Happy 21st Birthday 🤍</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Made for Confidence Makoma Moropana</span>
+    <span>Friends since 2019 • Chapter 21 • 26 September 2026</span>
+  </footer>
+
+  <!-- Open-when modal -->
+  <div id="noteModal" class="modal" aria-hidden="true">
+    <div class="modal-paper" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button id="closeModal" class="modal-close" type="button" aria-label="Close">×</button>
+      <p class="eyebrow">OPEN WHEN</p>
+      <h3 id="modalTitle"></h3>
+      <div id="modalText" class="modal-text"></div>
+      <p class="modal-sign">— Lesetja</p>
+    </div>
+  </div>
+
+  <!-- Full photo album -->
+  <div id="galleryModal" class="gallery-modal" aria-hidden="true">
+    <div class="gallery-topbar">
+      <div>
+        <p class="eyebrow eyebrow-light">THE FULL ALBUM</p>
+        <strong id="galleryCounter">01 / 20</strong>
+      </div>
+      <button id="galleryClose" class="gallery-close" type="button" aria-label="Close album">×</button>
+    </div>
+
+    <div class="gallery-stage">
+      <button id="galleryPrev" class="gallery-arrow gallery-prev" type="button" aria-label="Previous photo">←</button>
+      <figure class="gallery-feature">
+        <div class="gallery-image-wrap"><img id="galleryImage" alt="Memory from the full album" /></div>
+        <figcaption>
+          <span id="galleryLabel">Memory</span>
+          <p id="galleryCaption"></p>
+          <small id="gallerySubtext"></small>
+        </figcaption>
+      </figure>
+      <button id="galleryNext" class="gallery-arrow gallery-next" type="button" aria-label="Next photo">→</button>
+    </div>
+
+    <div id="galleryThumbs" class="gallery-thumbs" aria-label="All photos"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
