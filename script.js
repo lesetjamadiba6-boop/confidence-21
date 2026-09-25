@@ -4,20 +4,26 @@ const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const birthdayDate = new Date("2026-09-26T00:00:00+02:00");
 
 /* -----------------------------
-   Opening + soundtrack
+   Midnight lock + soundtrack
 ------------------------------ */
 const giftScreen = $("#giftScreen");
 const giftArt = $(".gift-art");
-const openGiftButton = $("#openGift");
 const miniNav = $("#miniNav");
 const musicDock = $("#musicDock");
 const soundtrack = $("#soundtrack");
 const musicToggle = $("#musicToggle");
 const musicStatus = $("#musicStatus");
 
+const lockDays = $("#lockDays");
+const lockHours = $("#lockHours");
+const lockMinutes = $("#lockMinutes");
+const lockSeconds = $("#lockSeconds");
+const lockMessage = $("#lockMessage");
+
 soundtrack.volume = 0.32;
 soundtrack.load();
 let typingStarted = false;
+let siteUnlocked = false;
 
 function setMusicUI(isPlaying, message) {
   musicDock.classList.toggle("paused", !isPlaying);
@@ -32,32 +38,65 @@ async function playSoundtrack() {
     if (playPromise) await playPromise;
     setMusicUI(true, "playing softly");
   } catch (error) {
-    console.warn("Soundtrack could not start:", error);
+    // Browsers generally require a user tap/click before starting audio.
+    console.warn("Soundtrack could not start automatically:", error);
     setMusicUI(false, "tap to play");
   }
 }
 
 soundtrack.addEventListener("canplay", () => {
-  if (soundtrack.paused) musicStatus.textContent = "soundtrack ready";
+  if (soundtrack.paused) musicStatus.textContent = "tap to play";
 });
 
 soundtrack.addEventListener("error", () => {
   setMusicUI(false, "audio unavailable");
 });
 
-openGiftButton.addEventListener("click", () => {
+function unlockSite({ celebrate = false } = {}) {
+  if (siteUnlocked) return;
+  siteUnlocked = true;
+
   giftArt?.classList.add("opening");
-  createConfetti(45);
-  playSoundtrack();
+  if (celebrate) createConfetti(120);
 
   window.setTimeout(() => {
     giftScreen.classList.add("is-hidden");
     document.body.classList.remove("no-scroll");
     miniNav.classList.add("show");
     musicDock.classList.add("show");
+    setMusicUI(false, "tap to play");
     typeHeroMessage();
-  }, 700);
-});
+  }, celebrate ? 900 : 80);
+}
+
+function updateLockCountdown() {
+  const difference = birthdayDate - new Date();
+
+  if (difference <= 0) {
+    if (lockDays) lockDays.textContent = "00";
+    if (lockHours) lockHours.textContent = "00";
+    if (lockMinutes) lockMinutes.textContent = "00";
+    if (lockSeconds) lockSeconds.textContent = "00";
+    if (lockMessage) lockMessage.textContent = "Happy 21st, Confidence. Chapter 21 is now open. 🤍";
+    unlockSite({ celebrate: true });
+    return;
+  }
+
+  const days = Math.floor(difference / 86400000);
+  const hours = Math.floor((difference / 3600000) % 24);
+  const minutes = Math.floor((difference / 60000) % 60);
+  const seconds = Math.floor((difference / 1000) % 60);
+
+  if (lockDays) lockDays.textContent = String(days).padStart(2, "0");
+  if (lockHours) lockHours.textContent = String(hours).padStart(2, "0");
+  if (lockMinutes) lockMinutes.textContent = String(minutes).padStart(2, "0");
+  if (lockSeconds) lockSeconds.textContent = String(seconds).padStart(2, "0");
+}
+
+// If she arrives before midnight, the fixed lock screen covers the whole site
+// and body scrolling stays disabled. At 00:00 SAST it disappears automatically.
+updateLockCountdown();
+window.setInterval(updateLockCountdown, 1000);
 
 musicToggle.addEventListener("click", () => {
   if (soundtrack.paused) {

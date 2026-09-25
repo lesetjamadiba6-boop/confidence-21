@@ -38,3 +38,10 @@ Important: upload the CONTENTS of this folder to the repository root so index.ht
 
 Birthday: 26 September 2026
 Friendship: since 2019
+
+
+MIDNIGHT LOCK
+-------------
+The site is locked behind a full-screen countdown until 26 September 2026 at 00:00 South African Standard Time (UTC+2). Before then, visitors cannot scroll into the birthday content. When the timer reaches zero, the page unlocks automatically.
+
+Browser note: modern browsers block audio from starting automatically unless the visitor taps/clicks first. After the site unlocks, use the music button at the bottom-left to start the soundtrack.

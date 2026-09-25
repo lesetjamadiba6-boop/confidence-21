@@ -15,22 +15,22 @@
 <body class="no-scroll">
   <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
 
-  <!-- Opening screen -->
-  <section id="giftScreen" class="gift-screen" aria-label="Birthday gift opening screen">
-    <div class="gift-copy">
+  <!-- Birthday lock screen: the rest of the site unlocks at midnight SAST -->
+  <section id="giftScreen" class="gift-screen birthday-lock" aria-label="Birthday countdown lock screen">
+    <div class="gift-copy lock-copy">
       <p class="eyebrow">FOR CONFIDENCE MAKOMA MOROPANA</p>
-      <h1>A little corner<br />of the internet,<br /><em>just for you.</em></h1>
-      <p class="gift-subtitle">Made with love, old photos, new memories, and a friendship that has been growing since 2019.</p>
-      <button id="openGift" class="button button-primary">Open Chapter 21 <span>→</span></button>
+      <h1>Chapter 21<br /><em>is almost here.</em></h1>
+      <p class="gift-subtitle">This little corner of the internet unlocks when 26 September begins in South Africa.</p>
 
-      <div class="soundtrack-preview" aria-label="Soundtrack preview">
-        <span class="soundtrack-note">♪</span>
-        <div>
-          <strong>Chapter 21 Theme</strong>
-          <small>birthday soundtrack • starts when you open</small>
-        </div>
+      <div class="lock-countdown" id="lockCountdown" aria-label="Countdown until Chapter 21 unlocks">
+        <div><strong id="lockDays">00</strong><span>days</span></div>
+        <div><strong id="lockHours">00</strong><span>hours</span></div>
+        <div><strong id="lockMinutes">00</strong><span>minutes</span></div>
+        <div><strong id="lockSeconds">00</strong><span>seconds</span></div>
       </div>
-      <p class="tiny-date">26 September 2026</p>
+
+      <p id="lockMessage" class="lock-message">When every number reaches 00, Chapter 21 opens automatically. 🤍</p>
+      <p class="tiny-date">26 September 2026 • 00:00 SAST</p>
     </div>
 
     <div class="gift-art" aria-hidden="true">
